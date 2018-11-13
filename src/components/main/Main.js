@@ -27,11 +27,11 @@ class Main extends React.Component {
       Well, those days are no more! This is the future. With us, you can know the status of the machines
       in real time. <b>So buckle up.</b></p>
           </div>
-        </div>
-        <footer>
-          <p>L.I.T., Copyright &copy; 2018</p>
-        </footer>
       </div>
+      <footer>
+        <p>L.I.T., Copyright &copy; 2018</p>
+      </footer>
+    </div>
     );
   }
 }
