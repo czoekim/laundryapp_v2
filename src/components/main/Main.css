@@ -1,16 +1,39 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+.image {
+  position: relative;
+  display:inline-block;
+}
+
 #laundryroom {
+  float: left;
   max-width: 70%;
   max-height: 100%;
   margin-right: 15px;
   margin-top: 5px;
-  float: left;
   z-index: 1;
+}
+
+@media only screen and (max-width: 800px) {
+  #laundryroom {
+    max-width: 100%;
+  }
+}
+
+.title {
+  color: white;
+  float: left;
+  margin-top: 30%;
+  max-width: 70%;
+  font-size: 4vw;
+  margin-left: 15px;
+  position: absolute;
+  z-index: 2;
 }
 
 .introduction {
   font-family: 'Montserrat';
+  z-index: 2;
 }
 
 .introduction h4 {
@@ -26,22 +49,17 @@
   z-index: 1;
 }
 
-.title {
-  color: white;
-  float: left;
-  font-size: 50px;
-  margin-left: 15px;
-  bottom: 10px;
-  position: absolute;
-  z-index: 2;
-}
-
 footer {
   padding: 0.5px;
   margin-top: 5px;
-  text-align: center;
   background: url('./nightsky.jpg') no-repeat 0 -200px;
+}
+
+footer p {
+  font-size: 12px;
+  text-align: right;
   color: #ffffff;
+  padding-right: 10px;
 }
 
 /* cyrillic-ext */

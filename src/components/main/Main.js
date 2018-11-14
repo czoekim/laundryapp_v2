@@ -6,8 +6,16 @@ class Main extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      name: ""
     };
+
+    this.changeText = this.changeText.bind(this);
+  }
+
+  changeText(event) {
+    this.setState({
+      name: event.target.value
+    });
   }
 
   render() {
@@ -27,9 +35,14 @@ class Main extends React.Component {
       Well, those days are no more! This is the future. With us, you can know the status of the machines
       in real time. <b>So buckle up.</b></p>
           </div>
+          <div>
+            <label htmlFor="name">Enter Text Here </label>
+            <input type="text" id="name" onChange={this.changeText} />
+            <h3>{this.state.name}</h3>
+          </div>
       </div>
       <footer>
-        <p>L.I.T., Copyright &copy; 2018</p>
+        <p>Laundry Informational Technologies, Copyright &copy; 2018</p>
       </footer>
     </div>
     );
