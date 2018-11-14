@@ -14,12 +14,6 @@
   z-index: 1;
 }
 
-@media only screen and (max-width: 800px) {
-  #laundryroom {
-    max-width: 100%;
-  }
-}
-
 .title {
   color: white;
   float: left;
@@ -50,6 +44,8 @@
 }
 
 footer {
+  margin-bottom: 0;
+  width: 100%;
   padding: 0.5px;
   margin-top: 5px;
   background: url('./nightsky.jpg') no-repeat 0 -200px;
@@ -60,6 +56,12 @@ footer p {
   text-align: right;
   color: #ffffff;
   padding-right: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+  #laundryroom {
+    max-width: 100%;
+  }
 }
 
 /* cyrillic-ext */

@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import Navbar from './components/navbar/Navbar';
 import Main from './components/main/Main';
+import {BrowserRouter, Route} from 'react-router-dom';
+import SignIn from './components/SignIn/SignIn';
+import SignUp from './components/SignUp/SignUp';
 
 class App extends Component {
   constructor(props) {
@@ -13,10 +16,30 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Navbar />
-        <Main />
-      </div>
+      <BrowserRouter>
+        <div>
+          <Route exact={true} path='/' render={()=>(
+              <div className="App">
+                <Navbar />
+                <Main />
+              </div>
+          )}/>
+        <Route exact={true} path='/signin' render={()=>(
+            <div className="App">
+                <SignIn />
+              </div>
+          )}/>
+        <Route exact={true} path='/signup/' render={()=>(
+            <div className="App">
+              <SignUp />
+            </div>
+        )}/>
+        </div>
+      </BrowserRouter>
+      // <div className="App">
+      //   <Navbar />
+      //   <Main />
+      // </div>
     );
   }
 }
