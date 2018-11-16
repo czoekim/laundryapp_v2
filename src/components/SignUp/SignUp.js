@@ -1,14 +1,17 @@
 import React from 'react';
+import './SignUp.css';
 
 export default class SignUp extends React.Component {
-  state = {
+  constructor(props) {
+    super(props);
+    this.state={
 
+    };
   }
-
   render() {
     return(
       <div>
-        <div id="signInContainer">
+        <div className="signUpContainer">
           <form id="form">
             <input className="input" type="text" placeholder="First Name"/>
             <input className="input" type="text" placeholder="Last Name" />

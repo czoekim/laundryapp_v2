@@ -5,6 +5,7 @@ import Main from './components/main/Main';
 import {BrowserRouter, Route} from 'react-router-dom';
 import SignIn from './components/SignIn/SignIn';
 import SignUp from './components/SignUp/SignUp';
+import Footer from './components/footer/Footer';
 
 class App extends Component {
   constructor(props) {
@@ -22,6 +23,7 @@ class App extends Component {
               <div className="App">
                 <Navbar />
                 <Main />
+                <Footer />
               </div>
           )}/>
         <Route exact={true} path='/signin' render={()=>(
@@ -36,10 +38,6 @@ class App extends Component {
         )}/>
         </div>
       </BrowserRouter>
-      // <div className="App">
-      //   <Navbar />
-      //   <Main />
-      // </div>
     );
   }
 }

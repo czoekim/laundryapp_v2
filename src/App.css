@@ -17,16 +17,13 @@ input:focus {
 /* Reusable Component - Image Container */
 
 .image-container {
-  display: block;
+  display: inline-block;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
   background: #ffffff;
 }
 
-.image-container img {
-  width: 100%;
-}
 
 /* App Styles */
 

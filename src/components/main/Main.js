@@ -22,9 +22,11 @@ class Main extends React.Component {
     return(
       <div className="Main">
         <div className="image-container">
-          <img id="laundryroom" src={laundryroom} alt='' />
-          <div className="title">
-            <h1>It&apos;s Laundry Day.</h1>
+          <div className="image">
+            <img id="laundryroom" src={laundryroom} alt='' />
+            <div className="title">
+              <h1>It&apos;s Laundry Day.</h1>
+            </div>
           </div>
           <div className="introduction">
             <h4>The answer to all of your problems:</h4>
@@ -35,16 +37,8 @@ class Main extends React.Component {
       Well, those days are no more! This is the future. With us, you can know the status of the machines
       in real time. <b>So buckle up.</b></p>
           </div>
-          <div>
-            <label htmlFor="name">Enter Text Here </label>
-            <input type="text" id="name" onChange={this.changeText} />
-            <h3>{this.state.name}</h3>
-          </div>
+        </div>
       </div>
-      <footer>
-        <p>Laundry Informational Technologies, Copyright &copy; 2018</p>
-      </footer>
-    </div>
     );
   }
 }
