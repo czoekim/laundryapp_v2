@@ -6,6 +6,7 @@ import {BrowserRouter, Route} from 'react-router-dom';
 import SignIn from './components/SignIn/SignIn';
 import SignUp from './components/SignUp/SignUp';
 import Footer from './components/footer/Footer';
+import Machine from './components/machine/Machine';
 
 class App extends Component {
   constructor(props) {
@@ -34,6 +35,13 @@ class App extends Component {
         <Route exact={true} path='/signup/' render={()=>(
             <div className="App">
               <SignUp />
+            </div>
+        )}/>
+        <Route exact={true} path='/laundryRoom/' render={()=>(
+            <div className="App">
+              <Machine machineType="Washer" />
+              <Machine machineType="Dryer"/>
+              <Footer />
             </div>
         )}/>
         </div>

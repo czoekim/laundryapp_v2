@@ -1,7 +1,7 @@
 
 /* Global */
 .container {
-  width: 80%;
+  width: 100%;
   margin: auto;
   overflow: hidden;
 }
@@ -24,7 +24,7 @@ header .a:hover {
 }
 header #branding h1 {
   font-size: 20px;
-  margin: 0;
+  margin: 0 0 0 10px;
   float: left;
   padding-bottom: 12px;
 }
@@ -90,4 +90,10 @@ header nav {
 
 .dropdown:hover .dropdown-content{
   display: block;
+}
+
+@media screen and (max-width: 500px) {
+  header #branding h1 {
+    font-size: 4vw;
+  }
 }
