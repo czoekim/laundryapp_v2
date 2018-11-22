@@ -37,9 +37,9 @@ class App extends Component {
               <SignUp />
             </div>
         )}/>
-        <Route exact={true} path='/laundryRoom/' render={()=>(
+      <Route exact={true} path='/laundryroom/' render={()=>(
             <div className="App">
-              <Machine machineType="Washer" />
+              <Machine machineType="Washer"/>
               <Machine machineType="Dryer"/>
               <Footer />
             </div>

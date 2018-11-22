@@ -1,0 +1,39 @@
+.machine {
+  position: relative;
+  display: block;
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.machineType {
+  text-align: center;
+  font-family: 'Montserrat';
+  margin: 10px;
+}
+
+.machineButton {
+  display: block;
+  background: inherit;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.rotateImg {
+  display: block;
+  position: relative;
+  margin: 10px auto;
+  height: 30px;
+  width: auto;
+}
+
+.rotateImgActive {
+  -webkit-animation:spin 1s linear infinite;
+  -moz-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

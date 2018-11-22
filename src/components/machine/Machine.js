@@ -1,11 +1,12 @@
 import React from 'react';
 import './Machine.css';
+import RotateArrow from './rotate-arrow.png';
 
 export default class Machine extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      available: false,
+      available: true,
       broken: false
     };
     this.toggleMachineStatus = this.toggleMachineStatus.bind(this);
@@ -19,15 +20,23 @@ export default class Machine extends React.Component {
 
   render() {
     const isAvailable = this.state.available;
-    let buttonStyle;
+    let machineStyle, imgStyle, buttonStatus;
     if(isAvailable) {
-      buttonStyle = {color: 'red'};
+      machineStyle = {backgroundColor: 'green', color: 'white'};
+      imgStyle = 'rotateImg';
+      buttonStatus = 'Use';
     } else {
-      buttonStyle = {color:'green'};
+      machineStyle = {backgroundColor: 'red', color: 'white'};
+      imgStyle = 'rotateImg rotateImgActive';
+      buttonStatus = 'Free up';
     }
     return (
       <div>
-        <button onClick={this.toggleMachineStatus} style={buttonStyle}>{this.props.machineType}</button>
+        <div className="machine" style={machineStyle}>
+          <h4 className="machineType">{this.props.machineType}</h4>
+          <img className={imgStyle} src={RotateArrow} />
+          <button className="machineButton" onClick={this.toggleMachineStatus}>{buttonStatus}</button>
+        </div>
       </div>
     );
   }
