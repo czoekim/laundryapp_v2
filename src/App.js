@@ -39,8 +39,9 @@ class App extends Component {
         )}/>
       <Route exact={true} path='/laundryroom/' render={()=>(
             <div className="App">
-              <Machine machineType="Washer"/>
-              <Machine machineType="Dryer"/>
+              <Navbar />
+              <Machine machineType="Washer" machineNumber="1"/>
+              <Machine machineType="Dryer" machineNumber="1"/>
               <Footer />
             </div>
         )}/>

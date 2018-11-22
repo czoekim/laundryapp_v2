@@ -10,6 +10,7 @@ export default class Machine extends React.Component {
       broken: false
     };
     this.toggleMachineStatus = this.toggleMachineStatus.bind(this);
+    this.reportBroken = this.reportBroken.bind(this);
   }
 
   toggleMachineStatus() {
@@ -18,25 +19,51 @@ export default class Machine extends React.Component {
     });
   }
 
+  reportBroken() {
+    this.setState({
+      broken: true,
+    })
+  }
+
   render() {
     const isAvailable = this.state.available;
-    let machineStyle, imgStyle, buttonStatus;
-    if(isAvailable) {
-      machineStyle = {backgroundColor: 'green', color: 'white'};
-      imgStyle = 'rotateImg';
-      buttonStatus = 'Use';
+    let machineStyle, imgClass, buttonStatus, machineHeader,buttonStyle;
+    if(!this.state.broken) {
+      machineHeader = this.props.machineType + ' ' + this.props.machineNumber;
+      if(isAvailable) {
+        machineStyle = {
+          background: 'radial-gradient(circle, #38ef7d, #11998e)', /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        };
+        imgClass = 'rotateImg';
+        buttonStatus = 'Use';
+      } else {
+        machineStyle = {
+          background: 'radial-gradient(circle, #ff6a00, #ee0979)', /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        };
+        imgClass = 'rotateImg rotateImgActive';
+        buttonStatus = 'Free';
+      }
     } else {
-      machineStyle = {backgroundColor: 'red', color: 'white'};
-      imgStyle = 'rotateImg rotateImgActive';
-      buttonStatus = 'Free up';
+      machineStyle = {
+        background: '#000000',
+      }
+      buttonStyle = {display:'none'}
+      machineHeader = this.props.machineType + ' ' + this.props.machineNumber + ' | Out of Order';
+      imgClass = 'rotateImgHide';
     }
+
     return (
       <div>
         <div className="machine" style={machineStyle}>
-          <h4 className="machineType">{this.props.machineType}</h4>
-          <img className={imgStyle} src={RotateArrow} />
-          <button className="machineButton" onClick={this.toggleMachineStatus}>{buttonStatus}</button>
-        </div>
+          <div className="machineHeader">
+            <h4 className="machineType">{machineHeader}</h4>
+            <img className={imgClass} src={RotateArrow} />
+          </div>
+          <div className="buttonPanel" style={buttonStyle}>
+            <button className="machineButton" onClick={this.toggleMachineStatus}>{buttonStatus}</button>
+            <button className="machineButton" onClick={this.reportBroken}>Report Broken</button>
+          </div>
+      </div>
       </div>
     );
   }
