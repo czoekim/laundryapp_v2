@@ -1,0 +1,23 @@
+.sutton-container {
+  display: inline-block;
+  flex-direction: column;
+  float: right;
+}
+
+.Washers {
+  display: inline-block;
+}
+
+.machineHeader {
+  font-family: 'Avenir', sans-serif;
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+.Dryers {
+  display: inline-block;
+}
+
+.machines {
+  margin-top: 2px;
+}
