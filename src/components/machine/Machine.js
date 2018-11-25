@@ -55,7 +55,7 @@ export default class Machine extends React.Component {
     return (
       <div>
         <div className="machine" style={machineStyle}>
-          <div className="machineHeader">
+          <div className="machineStatus">
             <h4 className="machineType">{machineHeader}</h4>
             <img className={imgClass} src={RotateArrow} />
           </div>

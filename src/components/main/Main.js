@@ -6,7 +6,7 @@ class Main extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: ""
+      users:[]
     };
 
     this.changeText = this.changeText.bind(this);
@@ -16,6 +16,10 @@ class Main extends React.Component {
     this.setState({
       name: event.target.value
     });
+  }
+
+  componentDidMount() {
+    fetch('/users').then(res=>res.json()).then(users=>this.setState({users}));
   }
 
   render() {
@@ -36,6 +40,12 @@ class Main extends React.Component {
         back to your room, wait for an indefinite amount of time and try again later.
       Well, those days are no more! This is the future. With us, you can know the status of the machines
       in real time. <b>So buckle up.</b></p>
+          </div>
+          <div>
+            <h1>Users</h1>
+            {this.state.users.map(user=>
+              <div key={user.id}>{user.username}</div>
+            )}
           </div>
         </div>
       </div>

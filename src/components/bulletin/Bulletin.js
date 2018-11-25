@@ -1,12 +1,21 @@
 import React from 'react';
 import './Bulletin.css';
 
-export default class Bulletin extends React.Component {
+class Bulletin extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      messages: [],
-    };
+
   }
 
+  render() {
+    return(
+      <div className="bulletin-container">
+      
+      </div>
+    )
+  }
+
+
 }
+
+export default Bulletin;

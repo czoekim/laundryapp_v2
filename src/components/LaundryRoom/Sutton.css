@@ -1,0 +1,30 @@
+.sutton-container {
+  display: inline-block;
+  flex-direction: column;
+  float: right;
+}
+
+.Washers {
+  flex-direction: row;
+  display: inline-block;
+  position: relative;
+}
+
+.machineHeader {
+  display: inline-block;
+  font-family: 'Avenir', sans-serif;
+  font-size: 20px;
+  margin-top: 15px;
+  position: relative;
+  margin-left: 15px;
+}
+
+.Dryers {
+  flex-direction: row;
+  display: inline-block;
+  position: relative;
+}
+
+.machines {
+  display: relative;
+}

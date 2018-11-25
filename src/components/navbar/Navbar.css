@@ -1,8 +1,8 @@
 
 /* Global */
 .container {
-  width: 100%;
-  margin: auto;
+  min-width: 100%;
+  margin: 0;
   overflow: hidden;
 }
 

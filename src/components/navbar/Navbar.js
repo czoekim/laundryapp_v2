@@ -19,11 +19,11 @@ class Navbar extends React.Component {
       			</div>
       			<nav>
       				<ul>
-      					<li className="current"><a href="#">Home</a></li>
+      					<li className="current"><a href="/">Home</a></li>
                 <div className="dropdown">
                   <button className="dropbtn">Residence Halls &#9660;</button>
                     <div className="dropdown-content">
-                      <a href="#">Sutton Place</a>
+                      <a href="/sutton">Sutton Place</a>
                       <a href="#">Elizabeth Hall</a>
                       <a href="#">Strong Hall</a>
                     </div>

@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
 import Navbar from './components/navbar/Navbar';
+import Navbar2 from './components/navbar/Navbar2';
 import Main from './components/main/Main';
 import {BrowserRouter, Route} from 'react-router-dom';
 import SignIn from './components/SignIn/SignIn';
 import SignUp from './components/SignUp/SignUp';
 import Footer from './components/footer/Footer';
 import Machine from './components/machine/Machine';
+import Sutton from './components/LaundryRoom/Sutton';
+import AdminDatabase from './components/admin/usersdatabase';
 
 class App extends Component {
   constructor(props) {
@@ -29,7 +32,7 @@ class App extends Component {
           )}/>
         <Route exact={true} path='/signin' render={()=>(
             <div className="App">
-                <SignIn />
+                <Navbar2 />
               </div>
           )}/>
         <Route exact={true} path='/signup/' render={()=>(
@@ -37,16 +40,20 @@ class App extends Component {
               <SignUp />
             </div>
         )}/>
-      <Route exact={true} path='/laundryroom/' render={()=>(
+      <Route exact={true} path='/sutton/' render={()=>(
             <div className="App">
               <Navbar />
-              <Machine machineType="Washer" machineNumber="1"/>
-              <Machine machineType="Dryer" machineNumber="1"/>
+              <Sutton />
               <Footer />
             </div>
         )}/>
-        </div>
-      </BrowserRouter>
+      <Route exact={true} path='/admindatabase/' render={()=>(
+            <div className="App">
+              <AdminDatabase />
+            </div>
+        )}/>
+    </div>
+  </BrowserRouter>
     );
   }
 }

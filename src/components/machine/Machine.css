@@ -1,25 +1,27 @@
 .machine {
-  position: relative;
   display: block;
+  position: relative;
   border-radius: 10px;
-  width: 200px;
+  width: 150px;
   height: 100px;
   padding: 10px;
   margin: 5px;
 }
 
-.machineHeader {
+.machineStatus {
+  position: absolute;
   display: inline-block;
   width: 100%;
 }
 
 .machineType {
-  display: inline;
+  display: block;
+  position: fixed;
   text-align: left;
   font-family: 'Montserrat';
+  font-size: 15px;
   color: #ffffff;
-  margin: 10px 7px 10px 10px;
-  width: 50%;
+  margin: 0;
 }
 
 .machineButton {
@@ -28,6 +30,8 @@
   border: #ffffff 1px solid;
   border-radius: 5px;
   margin: 0 3px;
+  font-size: 11px;
+  padding-bottom: 2px;
 }
 
 button:hover {
@@ -36,13 +40,17 @@ button:hover {
 
 .buttonPanel {
   display: inline-block;
-  margin-top: 25%;
+  position: absolute;
+  margin: 4px auto;
+  bottom: 5px;
+
 }
 
 .rotateImg {
-  margin-left:3px;
-  margin-top: 8px;
+  display:inline;
   position: relative;
+  margin-left: 120px;
+  margin-bottom: 14px;
   height: 14px;
   width: auto;
 }
