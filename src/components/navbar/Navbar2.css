@@ -1,6 +1,7 @@
+
 .navbar {
   background: url('./nightsky.jpg') no-repeat 0 -50px;
-  height: 50px;
+  min-height: 50px;
 }
 
 .navbar-toggler-icon {
@@ -9,9 +10,13 @@
 
 .branding {
   color:#f0f0f0;
-  font-family: impact;
+  font-family: Raleway;
   font-size: 21px;
-  margin-top: 7px;
+  margin-top: 6px;
+}
+
+#navbarNar:default {
+
 }
 
 .nav-item {

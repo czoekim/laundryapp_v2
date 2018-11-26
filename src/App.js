@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './components/navbar/Navbar';
 import Navbar2 from './components/navbar/Navbar2';
 import Main from './components/main/Main';
+import Main2 from './components/main/Main2';
 import {BrowserRouter, Route} from 'react-router-dom';
 import SignIn from './components/SignIn/SignIn';
 import SignUp from './components/SignUp/SignUp';
@@ -30,10 +31,12 @@ class App extends Component {
                 <Footer />
               </div>
           )}/>
-        <Route exact={true} path='/signin' render={()=>(
+        <Route exact={true} path='/main2' render={()=>(
             <div className="App">
                 <Navbar2 />
-              </div>
+                <Main2 />
+                <Footer />
+            </div>
           )}/>
         <Route exact={true} path='/signup/' render={()=>(
             <div className="App">
@@ -42,7 +45,7 @@ class App extends Component {
         )}/>
       <Route exact={true} path='/sutton/' render={()=>(
             <div className="App">
-              <Navbar />
+              <Navbar2 />
               <Sutton />
               <Footer />
             </div>
