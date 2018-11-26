@@ -1,47 +1,54 @@
 import React from 'react';
-import axios from 'axios';
-import TableRow from './TableRow';
+import Modal from 'react-modal';
 
 export default class UsersDatabase extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      serverports: []
+      users: []
     };
   }
-
   componentDidMount() {
-    axios.get('http://localhost:4200/serverport')
-    .then(response=>{
-      this.setState({ serverports: response.data })
-    }).catch(function (error) {
-      console.log(error);
+    let self=this;
+    fetch('.././backend/LaundryServer/routes/users', {
+      method: 'GET'
+    }).then(function(response) {
+      if(response.status >= 400) {
+        throw new Error('Bad response from server');
+      }
+      return response.json();
+    }).then(function(data) {
+      self.setState({users: data});
+    }).catch(err => {
+      console.log("Error: ", err);
     })
-  }
-  tabRow() {
-    return this.state.serverports.map(function(obj,i){
-      return <TableRow obj={obj} key={i} />;
-    });
   }
 
   render() {
     return (
       <div className="container">
-        <table className="table table-striped">
-          <thead>
-            <tr>
-              <td>ID</td>
-              <td>Name</td>
-              <td>Email</td>
-              <td>Residence Hall</td>
-            </tr>
-          </thead>
-          <tbody>
-          {this.tabRow()}
-          </tbody>
-        </table>
+        <div className="panel panel-default p50 uth-panel">
+          <table className="table table-hover">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Residence Hall</th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.state.users.map(user =>
+                <tr key={user.id}>
+                  <td>{user.name}</td>
+                  <td>{user.email}</td>
+                  <td>{user.residencehall}</td>
+                  <td><a>Edit</a>|<a>Delete</a></td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        </div>
       </div>
     );
   }
-
 }

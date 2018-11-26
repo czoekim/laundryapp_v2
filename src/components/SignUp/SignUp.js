@@ -38,17 +38,21 @@ export default class SignUp extends React.Component {
   onSubmit(e) {
     e.preventDefault();
     console.log(`Name: ${this.state.name} Email: ${this.state.email} Res Hall: ${this.state.residencehall}`);
-    const serverport = {
-      name: this.state.name,
-      email: this.state.email,
-      residencehall: this.state.residencehall
-    }
-    axios.post('http://localhost:4200/serverport/add', serverport)
-    .then(res => console.log(res.data));
-    this.setState({
-      name:'',
-      email:'',
-      residencehall:''
+    fetch('/users/new', {
+      method:'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(this.state)
+    }).then(function(response) {
+      if(response.status >= 400) {
+        throw new Error("Bad response from server");
+      } return response.json();
+    }).then(function(data) {
+      console.log(data)
+      if(data=="success"){
+        console.log("Registration complete");
+      }
+    }).catch(function(err) {
+      console.log(err)
     });
   }
 

@@ -1,6 +1,6 @@
 .navbar {
   background: url('./nightsky.jpg') no-repeat 0 -50px;
-  padding-bottom: 2px;
+  height: 50px;
 }
 
 .navbar-toggler-icon {
@@ -11,9 +11,25 @@
   color:#f0f0f0;
   font-family: impact;
   font-size: 21px;
+  margin-top: 7px;
 }
 
 .nav-item {
   color: #ffffff;
   font-size: 15px;
+}
+
+.dropdown-menu {
+  background-color:black;
+  color: white;
+}
+
+.dropdown-item {
+  color: white;
+  font-size: 15px;
+}
+
+.dropdown-item:hover {
+  color: #ffffff;
+  background-color: grey;
 }

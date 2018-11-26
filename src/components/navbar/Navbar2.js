@@ -12,15 +12,15 @@ class Navbar2 extends React.Component {
   render() {
     return (
       <div className="nav-container">
-        <nav class="navbar navbar-expand-sm navbar-dark bg-light">
-          <a class="navbar-brand" href="#">
-          <h4 class="branding">Laundry Informational Technologies</h4></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#"
-          aria-controls="#" aria-expanded="false" aria-label="navigation bar">
+        <nav class="navbar navbar-expand-md navbar-dark bg-light">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <a class="navbar-brand" href="/">
+            <h4 class="branding">Laundry Informational Technologies</h4></a>
+            <ul class="navbar-nav" id="directoryLink">
               <li class="nav-item active">
                 <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
               </li>

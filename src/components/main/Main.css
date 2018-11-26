@@ -1,20 +1,26 @@
+.Main {
+  display: inline-block;
+  flex-direction: column;
+}
+
 .image {
-  display: inline;
+  display: inline-block;
   position: relative;
 }
 
 #laundryroom {
   float: left;
-  max-width: 70%;
+  max-width: 100%;
   max-height: 100%;
   margin-right: 15px;
   margin-top: 5px;
   z-index: 1;
 }
 
-.title {
+.imgtext {
+  font-weight: bold;
   color: #ffffff;
-  position: absolute;
+  position: relative;
   margin-left: 10px;
   font-size: 4vw;
   z-index: 2;
@@ -22,6 +28,7 @@
 
 .introduction {
   font-family: 'Montserrat', sans-serif;
+  display: relative;
 }
 
 .introduction h4 {

@@ -1,6 +1,6 @@
 
 /* Global */
-.container {
+/* .container {
   min-width: 100%;
   margin: 0;
   overflow: hidden;
@@ -57,14 +57,14 @@ header nav {
   padding: 2px;
   font-size: 15px;
   border:none;
-}
+} */
 
-.dropdown {
+/* .dropdown {
   float: left;
   overflow: hidden;
-}
+} */
 
-.dropdown-content {
+/* .dropdown-content {
   display: none;
   position: absolute;
   background-color:black;
@@ -86,7 +86,7 @@ header nav {
 .dropdown-content a:hover {
   color: #ffffff;
   background-color: grey;
-}
+} */
 
 .dropdown:hover .dropdown-content{
   display: block;

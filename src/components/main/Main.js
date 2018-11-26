@@ -18,9 +18,6 @@ class Main extends React.Component {
     });
   }
 
-  componentDidMount() {
-    fetch('/users').then(res=>res.json()).then(users=>this.setState({users}));
-  }
 
   render() {
     return(
@@ -28,7 +25,7 @@ class Main extends React.Component {
         <div className="image-container">
           <div className="image">
             <img id="laundryroom" src={laundryroom} alt='' />
-            <div className="title">
+            <div className="imgtext">
               <h1>It&apos;s Laundry Day.</h1>
             </div>
           </div>
