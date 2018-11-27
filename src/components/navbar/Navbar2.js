@@ -36,9 +36,6 @@ class Navbar2 extends React.Component {
               </li>
               <li className="nav-item"><a className="nav-link" href="#">Contact</a></li>
             </ul>
-            <form className="form-inline">
-              <a id="signin" className="pull-right">Sign In</a>
-            </form>
           </div>
         </nav>
       </div>

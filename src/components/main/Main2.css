@@ -36,11 +36,15 @@
   background-color: rgba(145,145,145,0.6);
 }
 
-#morebutton {
+#signin {
   font-size: 15px;
   border: #ffffff dashed 1px;
   background-color: inherit;
   border-radius: 20px;
+}
+
+#signin:hover {
+  background-color: rgb(51, 102, 204, 0.4);
 }
 
 .emphasis {
@@ -49,7 +53,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-  #morebutton {
+  #signin {
     font-size: 20px;
   }
 }

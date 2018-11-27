@@ -38,11 +38,6 @@ class App extends Component {
                 <Footer />
             </div>
           )}/>
-        <Route exact={true} path='/signup/' render={()=>(
-            <div className="App">
-              <SignUp />
-            </div>
-        )}/>
       <Route exact={true} path='/sutton/' render={()=>(
             <div className="App">
               <Navbar2 />
