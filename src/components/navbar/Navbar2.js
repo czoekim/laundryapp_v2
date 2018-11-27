@@ -22,19 +22,19 @@ class Navbar2 extends React.Component {
             <h4 className="branding">Laundry Informational Technologies</h4></a>
             <ul className="navbar-nav mr-auto" id="directoryLink">
               <li className="nav-item active">
-                <a className="nav-link" href="#">Home<span className="sr-only">(current)</span></a>
+                <a className="nav-link" href="/">Home<span className="sr-only">(current)</span></a>
               </li>
               <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                <a className="nav-link dropdown-toggle" href="/" id="navbardrop" data-toggle="dropdown">
                 Residence Halls
                 </a>
                 <div className="dropdown-menu">
                   <a className="dropdown-item" href="/sutton">Sutton Place</a>
-                  <a className="dropdown-item" href="#">Elizabeth Hall</a>
-                  <a className="dropdown-item" href="#">Strong Hall</a>
+                  <a className="dropdown-item" href="/">Elizabeth Hall</a>
+                  <a className="dropdown-item" href="/">Strong Hall</a>
                 </div>
               </li>
-              <li className="nav-item"><a className="nav-link" href="#">Contact</a></li>
+              <li className="nav-item"><a className="nav-link" href="/">Contact</a></li>
             </ul>
           </div>
         </nav>

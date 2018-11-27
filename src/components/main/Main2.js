@@ -38,7 +38,7 @@ export default class Main2 extends React.Component {
                   in real time.</p>
                 </div>
               </div>
-              <a className="btn btn-primary" id="signin" onMouseDown={this.handleMouseClick}>Sign In</a>
+              <button className="btn btn-primary" id="signin" onMouseDown={this.handleMouseClick}>Sign In</button>
             </div>
           </div>
         </div>

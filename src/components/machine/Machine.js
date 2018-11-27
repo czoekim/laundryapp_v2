@@ -7,10 +7,12 @@ export default class Machine extends React.Component {
     super(props);
     this.state = {
       available: true,
-      broken: false
+      broken: false,
+      user: ''
     };
     this.toggleMachineStatus = this.toggleMachineStatus.bind(this);
     this.reportBroken = this.reportBroken.bind(this);
+
   }
 
   toggleMachineStatus() {
@@ -24,6 +26,8 @@ export default class Machine extends React.Component {
       broken: true,
     })
   }
+
+
 
   render() {
     const isAvailable = this.state.available;
@@ -57,13 +61,13 @@ export default class Machine extends React.Component {
         <div className="machine" style={machineStyle}>
           <div className="machineStatus">
             <h4 className="machineType">{machineHeader}</h4>
-            <img className={imgClass} src={RotateArrow} />
+            <img className={imgClass} src={RotateArrow} alt=''/>
           </div>
           <div className="buttonPanel" style={buttonStyle}>
             <button className="machineButton" onClick={this.toggleMachineStatus}>{buttonStatus}</button>
             <button className="machineButton" onClick={this.reportBroken}>Report Broken</button>
           </div>
-      </div>
+        </div>
       </div>
     );
   }

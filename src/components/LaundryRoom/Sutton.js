@@ -3,9 +3,15 @@ import './Sutton.css';
 import Machine from '../machine/Machine';
 
 class Sutton extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+
+    }
+  }
   render() {
     return (
-      <div className="sutton-container">
+      <div>
         <div className="Washers">
           <h3 className="machineHeader">Washers</h3>
           <div className="machines">
@@ -23,7 +29,7 @@ class Sutton extends React.Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 

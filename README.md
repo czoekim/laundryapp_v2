@@ -1,5 +1,5 @@
 # Laundry Informational Technologies REACT web application
-Prototype web application that provides a platform where students can see and update the status of laundry machines in their residence hall.
+Responsive web application that seeks to provide a platform where students can view and update the status of laundry machines in their residence hall.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
