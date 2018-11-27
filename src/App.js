@@ -27,7 +27,7 @@ class App extends Component {
           <Route exact={true} path='/' render={()=>(
               <div className="App">
                 <Navbar2 />
-                <Main />
+                <Main2 />
                 <Footer />
               </div>
           )}/>

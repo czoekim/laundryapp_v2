@@ -38,7 +38,7 @@
 
 #morebutton {
   font-size: 15px;
-  border: #ffffff dashed 0.5px;
+  border: #ffffff dashed 1px;
   background-color: inherit;
   border-radius: 20px;
 }

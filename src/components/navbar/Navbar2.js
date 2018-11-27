@@ -12,30 +12,33 @@ class Navbar2 extends React.Component {
   render() {
     return (
       <div className="nav-container">
-        <nav class="navbar navbar-expand-md navbar-dark">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+        <nav className="navbar navbar-expand-md navbar-dark bg-dark">
+          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
             aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <a class="navbar-brand" href="/">
-            <h4 class="branding">Laundry Informational Technologies</h4></a>
-            <ul class="navbar-nav" id="directoryLink">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <a className="navbar-brand" href="/">
+            <h4 className="branding">Laundry Informational Technologies</h4></a>
+            <ul className="navbar-nav mr-auto" id="directoryLink">
+              <li className="nav-item active">
+                <a className="nav-link" href="#">Home<span className="sr-only">(current)</span></a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                 Residence Halls
                 </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="/sutton">Sutton Place</a>
-                  <a class="dropdown-item" href="#">Elizabeth Hall</a>
-                  <a class="dropdown-item" href="#">Strong Hall</a>
+                <div className="dropdown-menu">
+                  <a className="dropdown-item" href="/sutton">Sutton Place</a>
+                  <a className="dropdown-item" href="#">Elizabeth Hall</a>
+                  <a className="dropdown-item" href="#">Strong Hall</a>
                 </div>
               </li>
-              <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+              <li className="nav-item"><a className="nav-link" href="#">Contact</a></li>
             </ul>
+            <form className="form-inline">
+              <a id="signin" className="pull-right">Sign In</a>
+            </form>
           </div>
         </nav>
       </div>

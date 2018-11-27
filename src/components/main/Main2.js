@@ -17,7 +17,7 @@ export default class Main2 extends React.Component {
                 in real time.</p>
               </div>
             </div>
-            <a class="btn btn-primary" id="morebutton" href="/signup">Sign Up</a>
+            <a className="btn btn-primary" id="morebutton" href="/signup">Sign Up</a>
           </div>
         </div>
       </div>
