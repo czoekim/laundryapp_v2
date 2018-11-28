@@ -1,5 +1,7 @@
 import React from 'react';
 import './Navbar2.css';
+import { Link } from 'react-router-dom';
+import * as ROUTES from '../../constants/routes';
 
 class Navbar2 extends React.Component {
   constructor(props) {
@@ -18,18 +20,18 @@ class Navbar2 extends React.Component {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
-            <a className="navbar-brand" href="/">
-            <h4 className="branding">Laundry Informational Technologies</h4></a>
+            <Link to={ROUTES.LANDING} className="navbar-brand" >
+            <h4 className="branding">Laundry Informational Technologies</h4></Link>
             <ul className="navbar-nav mr-auto" id="directoryLink">
               <li className="nav-item active">
-                <a className="nav-link" href="/">Home<span className="sr-only">(current)</span></a>
+                <Link to={ROUTES.HOME} className="nav-link">Home<span className="sr-only">(current)</span></Link>
               </li>
               <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="/" id="navbardrop" data-toggle="dropdown">
+                <a className="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
                 Residence Halls
                 </a>
                 <div className="dropdown-menu">
-                  <a className="dropdown-item" href="/sutton">Sutton Place</a>
+                  <Link to={ROUTES.SUTTON} className="dropdown-item">Sutton Place</Link>
                   <a className="dropdown-item" href="/">Elizabeth Hall</a>
                   <a className="dropdown-item" href="/">Strong Hall</a>
                 </div>

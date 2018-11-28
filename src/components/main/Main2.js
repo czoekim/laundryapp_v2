@@ -1,6 +1,9 @@
 import React from 'react';
 import './Main2.css';
 import SignIn from '../SignIn/SignIn';
+import NavBar from '../navbar/Navbar2';
+import Footer from '../footer/Footer';
+
 export default class Main2 extends React.Component {
   constructor(props) {
     super(props);
@@ -25,6 +28,7 @@ export default class Main2 extends React.Component {
   render() {
     return(
       <div>
+        <NavBar />
         <div className="HomePage">
           <div className="laundromat-container">
             <div className="welcome-container">
@@ -38,12 +42,13 @@ export default class Main2 extends React.Component {
                   in real time.</p>
                 </div>
               </div>
-              <button className="btn btn-primary" id="signin" onMouseDown={this.handleMouseClick}>Sign In</button>
+              <button className="btn btn-primary" id="signin-button" onMouseDown={this.handleMouseClick}>Sign In</button>
             </div>
           </div>
         </div>
         <SignIn handleMouseDown={this.handleMouseDown} menuVisibility={this.state.visible}/>
-      </div>
+        <Footer />
+    </div>
     )
   }
 }
