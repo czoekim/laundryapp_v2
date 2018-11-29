@@ -66,15 +66,28 @@ class SignIn extends React.Component {
       onMouseDown={this.props.handleMouseDown}
       className={visibility}>
         <form className="signin-form" onSubmit={this.onSubmit}>
-          <input className="signin-label"
-            name="email" value={email} onChange={this.onChange}
-            type="text" placeholder="Email Address" />
-          <input className="signin-label"
-            name="password" value={password} onChange={this.onChange}
-            type="text" placeholder="Password" />
-          <input className="signin-label"
-            name="residencehall" value={residencehall} onChange={this.onChange}
-            type="text" placeholder="Residence Hall" />
+          <div className="signin-section">
+            <label for="emailspace">Email Address</label>
+            <input className="signin-space"id="emailspace"
+              name="email" value={email} onChange={this.onChange}
+              type="text" placeholder="Enter email" />
+          </div>
+          <div className="signin-section">
+            <label for="passwordspace">Password</label>
+            <input className="signin-space" id="passwordspace"
+              name="password" value={password} onChange={this.onChange}
+              type="text" placeholder="Password" />
+          </div>
+          <div className="form-group signin-section">
+            <label>Residence Hall:</label>
+            <select className="signin-space form-control" id="residencespace"
+              name="residencehall" value={residencehall} type="text" onChange={this.onChange}>
+              <option>Pick your residence hall</option>
+              <option value="Sutton">Sutton Place</option>
+              <option value="Elizabeth">Elizabeth Hall</option>
+              <option value="Strong">Strong Hall</option>
+            </select>
+          </div>
           <button disabled={isInvalid} type="submit" className="signin-submit">Sign In</button>
           {error && <p style={{margin: '3px'}}>{error.message}</p>}
         </form>

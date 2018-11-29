@@ -9,6 +9,7 @@
   overflow: scroll;
   z-index: 1000;
   font-family: Raleway;
+  padding: 0 5px 0 5px;
 }
 
 #flyoutSignIn.hide {
@@ -25,13 +26,19 @@ form {
   flex-direction: row;
 }
 
-.signin-label {
-  margin-left: 5px;
+.signin-section label {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.signin-section {
+  margin-bottom: 8px;
+}
+.signin-space {
   width: 100%;
 }
 
 .signin-submit {
-  margin-top: 15px;
+  margin-top: 7px;
   margin-left: 5px;
   font-size: 15px;
   border: #b0b0b0 dotted 1px;
@@ -42,8 +49,8 @@ form {
 
 @media only screen and (max-width: 768px ) {
   #flyoutSignIn {
-    width: 100vh;
-    height:45vh;
+    width: 100vw;
+    height:40vh;
     right: auto;
   }
   #flyoutSignIn.hide {
@@ -52,10 +59,6 @@ form {
   #flyoutSignIn.show {
     transform: translate3d(0,0vh,0);
     overflow: hidden;
-  }
-
-  .signin-label {
-    margin-top: 5px;
   }
 
 }
