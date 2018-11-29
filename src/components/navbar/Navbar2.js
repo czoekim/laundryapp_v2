@@ -27,11 +27,11 @@ class Navbar2 extends React.Component {
                 <Link to={ROUTES.HOME} className="nav-link">Home<span className="sr-only">(current)</span></Link>
               </li>
               <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
+                <a className="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href="/">
                 Residence Halls
                 </a>
                 <div className="dropdown-menu">
-                  <Link to={ROUTES.SUTTON} className="dropdown-item">Sutton Place</Link>
+                  <Link to={ROUTES.LANDING} className="dropdown-item">Sutton Place</Link>
                   <a className="dropdown-item" href="/">Elizabeth Hall</a>
                   <a className="dropdown-item" href="/">Strong Hall</a>
                 </div>

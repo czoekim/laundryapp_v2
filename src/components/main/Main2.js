@@ -1,6 +1,6 @@
 import React from 'react';
 import './Main2.css';
-import SignIn from '../SignIn/SignIn';
+import SignIn from '../SignIn/index.js';
 import NavBar from '../navbar/Navbar2';
 import Footer from '../footer/Footer';
 

@@ -27,6 +27,7 @@ form {
 
 .signin-label {
   margin-left: 5px;
+  width: 100%;
 }
 
 .signin-submit {
