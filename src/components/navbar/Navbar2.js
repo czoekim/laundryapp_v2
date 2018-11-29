@@ -1,7 +1,10 @@
 import React from 'react';
 import './Navbar2.css';
 import { Link } from 'react-router-dom';
+
+import SignOutButton from '../SignOut'
 import * as ROUTES from '../../constants/routes';
+
 
 class Navbar2 extends React.Component {
   constructor(props) {
@@ -38,6 +41,9 @@ class Navbar2 extends React.Component {
               </li>
               <li className="nav-item"><a className="nav-link" href="/">Contact</a></li>
             </ul>
+          </div>
+          <div className = "pull-right">
+            <SignOutButton />
           </div>
         </nav>
       </div>
