@@ -4,7 +4,9 @@ Responsive web application that seeks to provide a platform where students can v
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ### Tutorials and Resources Used:
-https://www.kirupa.com/react/smooth_sliding_menu_react_motion.htm
+[Sliding Sign In Component](https://www.kirupa.com/react/smooth_sliding_menu_react_motion.html) <br>
+[Using env variables](https://medium.freecodecamp.org/heres-how-you-can-actually-use-node-environment-variables-8fdf98f53a0a) <br>
+[Setting up Firebase and Routing](https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial/)
 
 ## Available Scripts
 

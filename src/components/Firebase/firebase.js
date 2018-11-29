@@ -1,4 +1,5 @@
 import app from 'firebase/app';
+import 'firebase/auth';
 require('dotenv').config();
 
 const config = {
@@ -13,6 +14,16 @@ const config = {
 class Firebase {
   constructor() {
     app.initializeApp(config);
+
+    this.auth = app.auth();
   }
+  doSignInWithEmailAndPassword = (email, password) =>
+    this.auth.signInWithEmailAndPassword(email,password);
+
+  doSignOut = () => this.auth.signOut();
 }
+
+// Authentication API
+
+
 export default Firebase;
