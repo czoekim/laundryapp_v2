@@ -3,7 +3,9 @@ Responsive web application that seeks to provide a platform where students can v
 
 (11/29/18): Authentication is set up, but pages can still be accessed by users who have not signed in. Most pages haven't been set up yet (the only ones being the landing page and the Sutton laundry room).<br>
 
-To be redirected to the Sutton laundry room from the landing page using the sign in, the form should be filled out as followed.
+(11/29/18): Later in the day -- Authentication and session handling are nearly set up. The landing page (including the Navbar) changes when you're signed in/out, but the links are currently not functioning to go to different pages. <br>
+
+Here is an account that can be used to sign in: <br>
 Email: dummy@email.com <br>
 Password: laundryiscool123 <br>
 Residence Hall: Sutton
