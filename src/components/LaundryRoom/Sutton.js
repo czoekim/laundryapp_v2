@@ -1,7 +1,7 @@
 import React from 'react';
 import './Sutton.css';
 import Machine from '../machine/Machine';
-import NavBar from '../navbar/Navbar2';
+
 
 class Sutton extends React.Component {
   constructor(props) {
@@ -14,7 +14,6 @@ class Sutton extends React.Component {
   render() {
     return (
       <div>
-      <NavBar />
         <div className="Washers">
           <h3 className="machineHeader">Washers</h3>
           <div className="machines">
