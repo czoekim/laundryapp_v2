@@ -1,9 +1,11 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
-import './SignIn.css';
 import { withFirebase } from '../Firebase';
+
+import { PasswordForgetLink } from '../PasswordForget';
 import * as ROUTES from '../../constants/routes';
+import './SignIn.css';
 
 const INITIAL_STATE = {
   email: '',
@@ -89,6 +91,7 @@ class SignIn extends React.Component {
             </select>
           </div>
           <button disabled={isInvalid} type="submit" className="signin-submit">Sign In</button>
+          <PasswordForgetLink />
           {error && <p style={{margin: '3px'}}>{error.message}</p>}
         </form>
       </div>

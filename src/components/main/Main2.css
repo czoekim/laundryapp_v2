@@ -14,9 +14,13 @@
   overflow: hidden;
 }
 
+.laundromat-container:after {
+  
+}
+
+
 .welcome-container {
   text-align: center;
-
 }
 
 .welcome-container h1 {

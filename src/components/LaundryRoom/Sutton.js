@@ -1,6 +1,7 @@
 import React from 'react';
 import './Sutton.css';
 import Machine from '../machine/Machine';
+import { NavbarAuth } from '../navbar/Navbar2';
 
 
 class Sutton extends React.Component {
@@ -14,6 +15,7 @@ class Sutton extends React.Component {
   render() {
     return (
       <div>
+        <NavbarAuth />
         <div className="Washers">
           <h3 className="machineHeader">Washers</h3>
           <div className="machines">

@@ -38,8 +38,9 @@ form {
 }
 
 .signin-submit {
-  margin-top: 7px;
-  margin-left: 5px;
+  margin-top: 2px;
+  margin-bottom: 3px;
+  margin-left: 2px;
   font-size: 15px;
   border: #b0b0b0 dotted 1px;
   color: rgba(40,40,40,1);
@@ -50,7 +51,7 @@ form {
 @media only screen and (max-width: 768px ) {
   #flyoutSignIn {
     width: 100vw;
-    height:40vh;
+    height:45vh;
     right: auto;
   }
   #flyoutSignIn.hide {

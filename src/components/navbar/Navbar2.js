@@ -28,6 +28,7 @@ export const NavbarAuth = () => (
               <a className="dropdown-item" href="/">Strong Hall</a>
             </div>
           </li>
+          <li className="nav-item"><Link to={ROUTES.ACCOUNT} className="nav-link">Account</Link></li>
           <li className="nav-item"><Link to={ROUTES.CONTACT} className="nav-link" href="/">Contact</Link></li>
         </ul>
       </div>

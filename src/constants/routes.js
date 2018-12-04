@@ -6,3 +6,4 @@ export const SUTTON = '/sutton';
 export const ELIZABETH = '/elizabeth';
 export const STRONG = '/strong';
 export const CONTACT = '/contact';
+export const PASSWORD_FORGET = '/passwordforget';
