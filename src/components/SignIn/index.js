@@ -59,14 +59,16 @@ class SignIn extends React.Component {
   render() {
     const { email, password, residencehall, error} = this.state;
     const isInvalid = password === '' || email === '';
-    var visibility = "hide";
-    if(this.props.menuVisibility) {
+    var visibility  = "hide";
+    if(this.props.signInVisibility) {
       visibility = "show";
     }
+
     return (
       <div id="flyoutSignIn"
       onMouseDown={this.props.handleMouseDown}
       className={visibility}>
+        <h4 id="SignInTitle">sign in</h4>
         <form className="signin-form" onSubmit={this.onSubmit}>
           <div className="signin-section">
             <label for="emailspace">Email Address</label>
@@ -78,7 +80,7 @@ class SignIn extends React.Component {
             <label for="passwordspace">Password</label>
             <input className="signin-space" id="passwordspace"
               name="password" value={password} onChange={this.onChange}
-              type="text" placeholder="Password" />
+              type="password" placeholder="Password" />
           </div>
           <div className="form-group signin-section">
             <label>Residence Hall:</label>

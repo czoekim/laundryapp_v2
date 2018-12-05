@@ -8,3 +8,6 @@ const HomePage = () => (
     <p>dummy dummy dummy text</p>
   </div>
 )
+
+const condition = authUser => !!authUser;
+export default withAuthorization(condition)(HomePage);

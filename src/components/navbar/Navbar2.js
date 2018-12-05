@@ -16,7 +16,7 @@ export const NavbarAuth = () => (
         <h4 className="branding">Laundry Informational Technologies</h4></Link>
         <ul className="navbar-nav mr-auto" id="directoryLink">
           <li className="nav-item active">
-            <Link to={ROUTES.LANDING} className="nav-link">Home<span className="sr-only">(current)</span></Link>
+            <Link to={ROUTES.HOME} className="nav-link">Home<span className="sr-only">(current)</span></Link>
           </li>
           <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" href="/">
@@ -51,7 +51,7 @@ export const NavbarNonAuth = () => (
         <h4 className="branding">Laundry Informational Technologies</h4></Link>
         <ul className="navbar-nav mr-auto" id="directoryLink">
           <li className="nav-item active">
-            <Link to={ROUTES.LANDING} className="nav-link">Home<span className="sr-only">(current)</span></Link>
+            <Link to={ROUTES.HOME} className="nav-link">Home<span className="sr-only">(current)</span></Link>
           </li>
           <li className="nav-item"><a className="nav-link" href="/">Contact</a></li>
         </ul>

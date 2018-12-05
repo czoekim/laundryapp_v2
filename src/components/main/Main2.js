@@ -1,6 +1,7 @@
 import React from 'react';
 import './Main2.css';
 import SignIn from '../SignIn/index';
+import SignUp from '../SignUp/index';
 import { NavbarAuth } from '../navbar/Navbar2';
 import { NavbarNonAuth } from '../navbar/Navbar2';
 import { AuthUserContext } from '../Session';
@@ -15,12 +16,6 @@ const Main2 = ({ authUser }) => (
 );
 
 class Main2Auth extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      visible: false
-    };
-  }
 
   render() {
     return(
@@ -49,26 +44,28 @@ class Main2Auth extends React.Component {
 }
 
 
-
 class Main2NonAuth extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      visible: false
+      signIn_visible: false,
+      signUp_visible: false
     };
-    this.handleMouseClick = this.handleMouseClick.bind(this);
+    // this.handleMouseClick = this.handleMouseClick.bind(this);
     this.toggleSignIn = this.toggleSignIn.bind(this);
+    this.toggleSignUp = this.toggleSignUp.bind(this);
   }
+
   toggleSignIn() {
     this.setState({
-      visible: !this.state.visible
+      signIn_visible: !this.state.signIn_visible
     });
   }
 
-  handleMouseClick(e) {
-    this.toggleSignIn();
-    console.log('clicked');
-    e.stopPropagation();
+  toggleSignUp() {
+    this.setState({
+      signUp_visible: !this.state.signUp_visible
+    });
   }
 
   render() {
@@ -88,12 +85,16 @@ class Main2NonAuth extends React.Component {
                   in real time.</p>
                 </div>
               </div>
-              <button className="btn btn-primary" id="signin-button" onMouseDown={this.handleMouseClick}>Sign In</button>
+              <div className="button-panel">
+                <button className="btn btn-primary" id="signin-button" onMouseDown={this.toggleSignIn}>Sign In</button>
+                <button className="btn btn-primary" id="signup-button" onMouseDown={this.toggleSignUp}>Sign Up</button>
+              </div>
             </div>
           </div>
         </div>
-        <SignIn handleMouseDown={this.handleMouseDown} menuVisibility={this.state.visible}/>
-        <Footer />
+        <SignIn handleMouseDown={this.handleMouseDown} signInVisibility={this.state.signIn_visible}/>
+        <SignUp handleMouseDown={this.handleMouseDown} signUpVisibility={this.state.signUp_visible}/>
+      <Footer />
     </div>
     )
   }
