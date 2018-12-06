@@ -25,7 +25,7 @@ class Main2Auth extends React.Component {
           <div className="laundromat-container">
             <div className="welcome-container">
               <div className="welcome-text">
-                <h1>It's Laundry Day.</h1>
+                <h1>Welcome back</h1>
                 <div className="paragraph-bg">
                   <p>You bring your weeks worth of dirty clothes to the laundry room only
                   to find that everybody and their mothers have also decided to do their laundry, too.

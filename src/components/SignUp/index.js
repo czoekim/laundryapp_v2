@@ -33,7 +33,12 @@ class SignUp extends React.Component {
     })
     .then(authUser => {
       this.setState({ ...INITIAL_STATE});
-      this.props.history.push(ROUTES.HOME);
+    })
+    .then(() => {
+      this.props.firebase.doSignInWithEmailAndPassword(email, passwordOne);
+    })
+    .then(() => {
+      this.props.history.push(ROUTES.HOME)
     })
     .catch(error => {
       this.setState({ error });

@@ -36,14 +36,14 @@ form {
   margin-bottom: 2px;
 }
 .form-section {
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 }
 .form-space {
   width: 100%;
 }
 
 .button-submit {
-  margin-top: 2px;
+  margin-top: 4px;
   margin-bottom: 3px;
   margin-left: 2px;
   font-size: 15px;
@@ -56,11 +56,11 @@ form {
 @media only screen and (max-width: 768px ) {
   #flyoutSignIn {
     width: 100vw;
-    height:46vh;
+    height:35vh;
     right: auto;
   }
   #flyoutSignIn.hide {
-    transform: translate3d(0,-46vh,0);
+    transform: translate3d(0,-35vh,0);
   }
   #flyoutSignIn.show {
     transform: translate3d(0,0vh,0);
