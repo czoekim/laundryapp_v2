@@ -69,22 +69,22 @@ class SignIn extends React.Component {
       onMouseDown={this.props.handleMouseDown}
       className={visibility}>
         <h4 id="SignInTitle">sign in</h4>
-        <form className="signin-form" onSubmit={this.onSubmit}>
-          <div className="signin-section">
+        <form onSubmit={this.onSubmit}>
+          <div className="form-section">
             <label for="emailspace">Email Address</label>
-            <input className="signin-space"id="emailspace"
+            <input className="form-space"id="emailspace"
               name="email" value={email} onChange={this.onChange}
               type="text" placeholder="Enter email" />
           </div>
-          <div className="signin-section">
+          <div className="form-section">
             <label for="passwordspace">Password</label>
-            <input className="signin-space" id="passwordspace"
+            <input className="form-space" id="passwordspace"
               name="password" value={password} onChange={this.onChange}
-              type="password" placeholder="Password" />
+              type="password" placeholder="Enter Password" />
           </div>
           <div className="form-group signin-section">
             <label>Residence Hall:</label>
-            <select className="signin-space form-control" id="residencespace"
+            <select className="form-space form-control" id="residencespace"
               name="residencehall" value={residencehall} type="text" onChange={this.onChange}>
               <option>Pick your residence hall</option>
               <option value="Sutton">Sutton Place</option>
@@ -92,7 +92,7 @@ class SignIn extends React.Component {
               <option value="Strong">Strong Hall</option>
             </select>
           </div>
-          <button disabled={isInvalid} type="submit" className="signin-submit">Sign In</button>
+          <button disabled={isInvalid} type="submit" className="button-submit">Sign In</button>
           <PasswordForgetLink />
           {error && <p style={{margin: '3px'}}>{error.message}</p>}
         </form>

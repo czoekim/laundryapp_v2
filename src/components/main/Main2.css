@@ -35,7 +35,8 @@
   background-color: rgba(145,145,145,0.6);
 }
 
-#signin-button{
+.form-button{
+  margin-right: 10px;
   font-size: 15px;
   border: #ffffff dashed 1px;
   background-color: inherit;
@@ -43,7 +44,7 @@
   color: #e3e3e3;
 }
 
-#signin-button:hover {
+.form-button:hover {
   background-color: rgb(51, 102, 204, 0.4);
   color: #ffffff;
 }

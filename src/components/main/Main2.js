@@ -66,6 +66,7 @@ class Main2NonAuth extends React.Component {
     this.setState({
       signUp_visible: !this.state.signUp_visible
     });
+
   }
 
   render() {
@@ -86,8 +87,9 @@ class Main2NonAuth extends React.Component {
                 </div>
               </div>
               <div className="button-panel">
-                <button className="btn btn-primary" id="signin-button" onMouseDown={this.toggleSignIn}>Sign In</button>
-                <button className="btn btn-primary" id="signup-button" onMouseDown={this.toggleSignUp}>Sign Up</button>
+                <button className="btn btn-primary form-button" onMouseDown={this.toggleSignIn}>Sign In</button>
+                <button className="btn btn-primary form-button"
+                  style={{color: "#f0f0f0"}}onMouseDown={this.toggleSignUp}>Sign Up</button>
               </div>
             </div>
           </div>

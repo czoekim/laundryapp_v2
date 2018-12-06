@@ -4,16 +4,16 @@
   height: 100vh;
   background-color: rgba(255,255, 255, 0.9);
   top: 0;
-  right: 0;
+  left: 0;
   transition: transform .3s cubic-bezier(0, 0.52, 0, 1);
   overflow: scroll;
   z-index: 1000;
   font-family: Raleway;
-  padding: 0 5px 0 5px;
+  padding: 10px 5px 0 5px;
 }
 
 #flyoutSignIn.hide {
-  transform: translate3d(30vw,0,0);
+  transform: translate3d(-30vw,0,0);
 }
 
 #flyoutSignIn.show {
@@ -21,7 +21,7 @@
   overflow: hidden;
 }
 
-#SignInTitle {
+.FormTitle {
   letter-spacing: 4px;
   margin-top: 5px;
 }
@@ -31,18 +31,18 @@ form {
   flex-direction: row;
 }
 
-.signin-section label {
+.form-section label {
   margin-top: 2px;
   margin-bottom: 2px;
 }
-.signin-section {
+.form-section {
   margin-bottom: 8px;
 }
-.signin-space {
+.form-space {
   width: 100%;
 }
 
-.signin-submit {
+.button-submit {
   margin-top: 2px;
   margin-bottom: 3px;
   margin-left: 2px;

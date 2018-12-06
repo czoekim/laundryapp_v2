@@ -32,11 +32,11 @@ class SignUp extends React.Component {
       .set({name, email, residencehall});
     })
     .then(authUser => {
-      this.setState({ ...INITIAL_STATE });
+      this.setState({ ...INITIAL_STATE});
       this.props.history.push(ROUTES.HOME);
     })
-    .catch(err => {
-      this.setState({ err });
+    .catch(error => {
+      this.setState({ error });
     });
     e.preventDefault();
   };
@@ -65,41 +65,63 @@ class SignUp extends React.Component {
       <div id="flyoutSignUp"
         onMouseDown={this.props.handleMouseDown}
         className={visibility}>
-        <h3>register</h3>
-        <a className="close" >&times;</a>
+        <h3 className="FormTitle">register</h3>
         <form onSubmit={this.onSubmit}>
-          <input
-            name="name"
-            value={name}
-            onChange={this.onChange}
-            type="text"
-            placeholder="Full Name" />
-          <input
-            name="email"
-            value={email}
-            onChange={this.onChange}
-            type="text"
-            placeholder="Email Address" />
-          <input
-            name="passwordOne"
-            value={passwordOne}
-            onChange={this.onChange}
-            type="password"
-            placeholder="Password" />
-          <input
-            name="passwordTwo"
-            value={passwordTwo}
-            onChange={this.onChange}
-            type="password"
-            placeholder="Confirm Password" />
-          <select className="signin-space form-control" id="residencespace"
-            name="residencehall" value={residencehall} type="text" onChange={this.onChange}>
-            <option>Pick your residence hall</option>
-            <option value="Sutton">Sutton Place</option>
-            <option value="Elizabeth">Elizabeth Hall</option>
-            <option value="Strong">Strong Hall</option>
-          </select>
-          <button disabled={isInvalid} type="submit">Sign Up</button>
+          <div className="form-section">
+            <label for="namespace">Name</label>
+            <input
+              className="form-space"
+              id="namespace"
+              name="name"
+              value={name}
+              onChange={this.onChange}
+              type="text"
+              placeholder="Full Name" />
+          </div>
+          <div className="form-section">
+            <label for="emailspace">Email</label>
+            <input
+              className="form-space"
+              name="email"
+              id="emailspace"
+              value={email}
+              onChange={this.onChange}
+              type="text"
+              placeholder="Email Address" />
+          </div>
+          <div className="form-section">
+            <label for="passwordOnespace">Password</label>
+            <input
+              className="form-space"
+              name="passwordOne"
+              id="passwordOnespace"
+              value={passwordOne}
+              onChange={this.onChange}
+              type="password"
+              placeholder="Password" />
+          </div>
+          <div className="form-section">
+            <label for="passwordTwospace">Confirm Password</label>
+            <input
+              className="form-space"
+              name="passwordTwo"
+              id="passwordTwospace"
+              value={passwordTwo}
+              onChange={this.onChange}
+              type="password"
+              placeholder="Confirm Password" />
+          </div>
+          <div className="form-section">
+            <label for="residencespace">Residence Hall</label>
+            <select className="form-space form-control" id="residencespace"
+              name="residencehall" value={residencehall} type="text" onChange={this.onChange}>
+              <option>Pick your residence hall</option>
+              <option value="Sutton">Sutton Place</option>
+              <option value="Elizabeth">Elizabeth Hall</option>
+              <option value="Strong">Strong Hall</option>
+            </select>
+          </div>
+          <button className="button-submit" id="signup-submit-button" disabled={isInvalid} type="submit">Sign Up</button>
           {error && <p>{error.message}</p>}
         </form>
       </div>
