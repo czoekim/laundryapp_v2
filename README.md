@@ -1,14 +1,13 @@
 # Laundry Informational Technologies REACT web application
 Responsive web application that seeks to provide a platform where students can view and update the status of laundry machines in their residence hall.
 
-(11/29/18): Authentication is set up, but pages can still be accessed by users who have not signed in. Most pages haven't been set up yet (the only ones being the landing page and the Sutton laundry room).<br>
-
-(11/29/18): Later in the day -- Authentication and session handling are nearly set up. The landing page (including the Navbar) changes when you're signed in/out, but the links are currently not functioning to go to different pages. <br>
+(12/13/18): Authentication is set up and links are all functional. There are still some work left for individual pages (e.g. Contact, Password Forget / Change). I am currently working on setting up the database for machine statuses and the home page when the user signs in.
 
 Here is an account that can be used to sign in: <br>
 Email: dummy@email.com <br>
 Password: laundryiscool123 <br>
-Residence Hall: Sutton
+Residence Hall: Sutton <br>
+Alternatively, you may register with another email and password.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
