@@ -53,7 +53,7 @@ export const NavbarNonAuth = () => (
           <li className="nav-item active">
             <Link to={ROUTES.HOME} className="nav-link">Home<span className="sr-only">(current)</span></Link>
           </li>
-          <li className="nav-item"><a className="nav-link" href="/">Contact</a></li>
+          <li><Link to={ROUTES.CONTACT} className="nav-link">Contact</Link></li>
         </ul>
       </div>
     </nav>
