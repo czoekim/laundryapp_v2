@@ -1,7 +1,9 @@
 # Laundry Informational Technologies REACT web application
-Responsive web application that seeks to provide a platform where students can view and update the status of laundry machines in their residence hall.
+Responsive web application that seeks to provide a platform where students can view and update the status of laundry machines in their residence hall. <br>
 
-(12/13/18): Authentication is set up and links are all functional. There are still some work left for individual pages (e.g. Contact, Password Forget / Change). I am currently working on setting up the database for machine statuses and the home page when the user signs in.
+The main page, links, and authentication are all functional! <br>
+
+![](laundry-app-gif.gif)
 
 Here is an account that can be used to sign in: <br>
 Email: dummy@email.com <br>
